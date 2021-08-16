@@ -67,6 +67,94 @@
         .teams .button:hover {
             background-color: #555;
         }
+        /* teams  */
+        
+        .pull {
+            float: left;
+        }
+        
+        .push {
+            float: right;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 100px auto;
+        }
+        
+        img {
+            width: 100%;
+            display: block;
+        }
+        /*Card Styling*/
+        
+        .card {
+            border: 1px solid #dedede;
+            background-color: white;
+        }
+        
+        .card p {
+            font-size: small;
+        }
+        
+        .card__wrap--inner {
+            padding: 10px;
+        }
+        
+        .card__item {
+            padding: 6px 9px 6px 9px;
+        }
+        
+        .card__sub {
+            padding: 0 18px;
+            font-style: oblique;
+        }
+        
+        .card__footer {
+            padding: 18px;
+            overflow: hidden;
+            border-top: 1px solid #dedede;
+        }
+        /*Card Flex Code*/
+        
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .card__wrap--outer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        
+        .card__wrap--inner {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        
+        @media (min-width: 480px) {
+            .card__wrap--inner {
+                width: 50%
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .card__wrap--inner {
+                width: 20%
+            }
+            .card__wrap--inner-team {
+                width: 33.33%;
+            }
+        }
+        
+        .flexible {
+            flex-grow: 1;
+        }
     </style>
 </head>
 
@@ -74,7 +162,10 @@
     <header class="s-header">
         <div class="header-logo">
             <a class="site-logo" href="index-2.html"> <img src="images/xlogo.png.pagespeed.ic.AhRUgST7wo.png" alt="Homepage"> </a>
+            <a class="site-logo" href="index-2.html"> <img src="images/clogo.png.pagespeed.ic.AhRUgST7wo.png" alt="Homepage"> </a>
+            <a class="site-logo" href="index-2.html"> <img src="images/tlogo.png.pagespeed.ic.AhRUgST7wo.png" alt="Homepage"> </a>
         </div>
+
         <nav class="header-nav"><a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
             <div class="header-nav__content">
                 <h3>Navigation</h3>
@@ -102,13 +193,13 @@
                     Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.
                 </p>
                 <ul class="header-nav__social">
-                    <li> <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li> <a href="#"><i class="fa fa-twitter"></i></a>
+                    
+                    <li> <a href="https://mobile.twitter.com/ClubUdaan" target="_blank"><i class="fa fa-twitter"></i></a>
                     </li>
                     <li> <a href="https://www.instagram.com/udaan___club/" target="_blank"><i class="fa fa-instagram"></i></a>
                     </li>
-                    <li><a href="https://www.linkedin.com/in/udaan-club" target="_blank"> <i class="fa fa-linkedin"></i></a>
+                    <li>
+                        <a href="https://www.linkedin.com/in/udaan-club" target="_blank"> <i class="fa fa-linkedin"></i></a>
                     </li>
                 </ul>
             </div>
@@ -125,7 +216,7 @@
                 <h3>Welcome to Udaan</h3>
                 <h1> Udaan is the Official <br> Entrepreneurship Club of <br> Management Department <br> formed under GEU-TBI.
                     <div class="home-content__buttons">
-                        <a href="#contact" class="smoothscroll btn btn--stroke"> Reach out to Us </a>
+                        <a href="#contact" class="smoothscroll btn btn--stroke"> Reach Out to Us </a>
 
                         <a href="#about" class="smoothscroll btn btn--stroke"> More About Us </a>
                     </div>
@@ -140,16 +231,14 @@
         <ul class="home-social">
 
             <li>
-                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-            </li>
-            <li>
-                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                <a href="https://mobile.twitter.com/ClubUdaan" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
             </li>
             <li>
                 <a href="https://www.instagram.com/udaan___club/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
             </li>
-            <li><a href="https://www.linkedin.com/in/udaan-club"> <i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
-                </li>
+            <li>
+                <a href="https://www.linkedin.com/in/udaan-club"> <i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+            </li>
         </ul>
     </section>
 
@@ -197,23 +286,13 @@
             </div>
         </div>
         <div class="row services-list block-1-2 block-tab-full">
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-paint-brush"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2">Brand Identity</h3>
-                    <p>
-                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
+            
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon">
                     <i class="icon-group"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Illustration</h3>
+                    <h3 class="h2">Building relevant skill in students</h3>
                     <p>
                         Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -224,29 +303,19 @@
                     <i class="icon-megaphone"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Marketing</h3>
+                    <h3 class="h2">Exposure of corporate industry</h3>
                     <p>
                         Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
                 </div>
             </div>
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-earth"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2">Web Design</h3>
-                    <p>
-                        Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
+            
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon">
                     <i class="icon-cube"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Packaging Design</h3>
+                    <h3 class="h2">Incubation of startups with GEU-TBI</h3>
                     <p>
                         Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -257,7 +326,7 @@
                     <i class="icon-lego-block"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Web Development</h3>
+                    <h3 class="h2">Business Events</h3>
                     <p>
                         Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -280,19 +349,19 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="images/portfolio/xlady-shutterbug.jpg.pagespeed.ic.VVxO5mw-ZR.jpg" srcset="images/portfolio/xlady-shutterbug.jpg.pagespeed.ic.VVxO5mw-ZR.jpg 1x, images/portfolio/lady-shutterbug@2x.jpg 2x" alt=""> </a>
+                                <a href="images/portfolio/gallery/event1.jpg" class="thumb-link" title="event1" data-size="1050x700">
+                                    <img src="images/portfolio/event1.jpg" srcset="images/portfolio/event1.jpg 1x, images/portfolio/event1.jpg 2x" alt=""> </a>
                             </div>
                             <div class="item-folio__text">
-                                <h3 class="item-folio__title"> Shutterbug</h3>
-                                <p class="item-folio__cat"> Branding</p>
+                                <h3 class="item-folio__title"> B-QUIZ!</h3>
+                                <p class="item-folio__cat"> 18-10-2020</p>
                             </div>
                             <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
                                 <i class="icon-link"></i>
                             </a>
                             <div class="item-folio__caption">
                                 <p>
-                                    Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                                    B Quiz was a general business quiz which was hosted to test the knowledge of the students about the business and existing ventures.
                                 </p>
                             </div>
                         </div>
@@ -300,20 +369,20 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                    <img src="images/portfolio/xwoodcraft.jpg.pagespeed.ic.CB3PZxDPVe.jpg" srcset="images/portfolio/xwoodcraft.jpg.pagespeed.ic.CB3PZxDPVe.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                                <a href="images/portfolio/gallery/event2.jpg" class="thumb-link" title="event2" data-size="1050x700">
+                                    <img src="images/portfolio/event2.jpg" srcset="images/portfolio/event2.jpg 1x, images/portfolio/event2.jpg 2x" alt="">
                                 </a>
                             </div>
                             <div class="item-folio__text">
-                                <h3 class="item-folio__title"> Woodcraft</h3>
-                                <p class="item-folio__cat"> Web Design</p>
+                                <h3 class="item-folio__title"> CHIMERA-X</h3>
+                                <p class="item-folio__cat"> 31-01-2021</p>
                             </div>
                             <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
                                 <i class="icon-link"></i>
                             </a>
                             <div class="item-folio__caption">
                                 <p>
-                                    Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                                    CHIMERA – X was a fun pop up cultural quiz. This event was also recognised as Central India’s Largest Quiz Fest.
                                 </p>
                             </div>
                         </div>
@@ -321,19 +390,19 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
-                                    <img src="images/portfolio/xthe-beetle.jpg.pagespeed.ic.kOC_gTKzpI.jpg" srcset="images/portfolio/xthe-beetle.jpg.pagespeed.ic.kOC_gTKzpI.jpg 1x, images/portfolio/the-beetle@2x.jpg 2x" alt="">
+                                <a href="images/portfolio/gallery/event3.jpg" class="thumb-link" title="event3" data-size="1050x700">
+                                    <img src="images/portfolio/event3.jpg" srcset="images/portfolio/event3.jpg 1x, images/portfolio/event3.jpg 2x" alt="">
                                 </a>
                             </div>
                             <div class="item-folio__text">
-                                <h3 class="item-folio__title"> The Beetle</h3>
-                                <p class="item-folio__cat"> Web Development</p>
+                                <h3 class="item-folio__title"> Meet The Entrepreneur : Deepak Chaudhary</h3>
+                                <p class="item-folio__cat"> 27-10-2020</p>
                             </div>
                             <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link"> <i class="icon-link"></i>
                             </a>
                             <div class="item-folio__caption">
                                 <p>
-                                    Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                                    Meet The Entreprenueur was a webinar with Mr. Deepak Chaudary, Fouder of CREATIKARTTA as our speaker. The focus of this webinar was on entrepreneurship and start ups.
                                 </p>
                             </div>
                         </div>
@@ -408,6 +477,7 @@
 
 
 
+
         <div class="row section-header" data-aos="fade-up">
 
             <div class="col-full">
@@ -416,216 +486,338 @@
             </div>
         </div>
 
-        <div class="container teams">
-            <div class="row clients-outer" data-aos="fade-up">
-                <div class="column">
+        <div class="container">
+            <div class="card__wrap--outer">
+                <div class="card__wrap--inner">
                     <div class="card">
-                        <img class="testimonials__avatar" src="images/team/mentor1.jpg" alt="pic" style="width:100%">
-                        <div class="container">
-                            <h3>Mr. Vishal<br> JC</h3>
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
                             <p class="title">Additional CEO GEU-TBI</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>Graphic Era Deemed to be University, Dehradun</p>
-                            <p><button class="btn--primary button">Contact</button></p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="column">
+                <div class="card__wrap--inner">
                     <div class="card">
-                        <img class="testimonials__avatar" src="images/team/mentor2.jpg" alt="pic" style="width:100%">
-                        <div class="container">
-                            <h3>Dr. Navneet Rawat</h3>
+                        <img src="images/team/mentor2.jpg">
+                        <div class="card__item">
+                            <h5>Dr. Navneet Rawat</h5>
+                        </div>
+                        <div class="card__sub">
                             <p class="title">HoD, Department of Management Studies</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>Graphic Era Deemed to be University, Dehradun</p>
-                            <p><button class="btn--primary button">Contact</button></p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="column">
+                <div class="card__wrap--inner">
                     <div class="card">
-                        <img class="testimonials__avatar" src="images/team/mentor3.jpg" alt="pic" style="width:100%">
-                        <div class="container">
-                            <h3>Dr. Neeraj Sharma</h3>
-                            <p class="title">Professor, Department of Management Studies 
-                            </p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>Graphic Era Deemed to be University, Dehradun</p>
-                            <p><button class="btn--primary button">Contact</button></p>
+                        <img src="images/team/mentor3.jpg">
+                        <div class="card__item">
+                            <h5>Dr. Navneet Rawat</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">HoD, Department of Management Studies</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="column">
+                <div class="card__wrap--inner">
                     <div class="card">
-                        <img class="testimonials__avatar" src="images/team/mentor4.jpg" alt="pic" style="width:100%">
-                        <div class="container">
-                            <h3>Mr. Kartikeya Raina</h3>
-                            <p class="title">Assistant Professor, Department of Management Studies</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>Graphic Era Deemed to be University, Dehradun</p>
-                            <p><button class="btn--primary button">Contact</button></p>
+                        <img src="images/team/mentor4.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="column">
+                <div class="card__wrap--inner">
                     <div class="card">
-                        <img class="testimonials__avatar" src="images/team/mentor5.jpg" alt="pic" style="width:100%">
-                        <div class="container">
-                            <h3>Mr. Deepak Chauhan</h3>
-                            <p class="title">PhD Scholar</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>Graphic Era Deemed to be University, Dehradun</p>
-                            <p><button class="btn--primary button">Contact</button></p>
+                        <img src="images/team/mentor5.jpg">
+                        <div class="card__item">
+                            <h5>Dr. Navneet Rawat</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">HoD, Department of Management Studies</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
             </div>
+        </div>
 
-            <div class="row clients-outer" data-aos="fade-up">
-                <div class="column">
+        <div class="row section-header" data-aos="fade-up">
+
+            <div class="col-full">
+                <h2 class="display-2">Our Team Mentors</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card__wrap--outer">
+                <div class="card__wrap--inner card__wrap--inner-team">
                     <div class="card">
-                        <img class="testimonials__avatar" src="images/avatars/xuser-05.jpg.pagespeed.ic.VeExVGrouX.jpg" alt="Mike" style="width:100%">
-                        <div class="container">
-                            <h2>Mike Ross</h2>
-                            <p class="title">Art Director</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>example@example.com</p>
-                            <p><button class="btn--primary button">Contact</button></p>
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__wrap--inner card__wrap--inner-team">
+                    <div class="card">
+                        <img src="images/team/mentor1.jpg">
+                        <div class="card__item">
+                            <h5>Mr. Vishal JC</h5>
+                        </div>
+                        <div class="card__sub">
+                            <p class="title">Additional CEO GEU-TBI</p>
+                        </div>
+                        <div class="card__item flexible">
+                            <small>Graphic Era Deemed to be University, Dehradun</small>
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn--primary button">Contact</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="column">
-                    <div class="card">
-                        <img class="testimonials__avatar" src="images/avatars/xuser-05.jpg.pagespeed.ic.VeExVGrouX.jpg" alt="Mike" style="width:100%">
-                        <div class="container">
-                            <h2>Mike Ross</h2>
-                            <p class="title">Art Director</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>example@example.com</p>
-                            <p><button class="btn--primary button">Contact</button></p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="column">
-                    <div class="card">
-                        <img class="testimonials__avatar" src="images/avatars/xuser-05.jpg.pagespeed.ic.VeExVGrouX.jpg" alt="Mike" style="width:100%">
-                        <div class="container">
-                            <h2>Mike Ross</h2>
-                            <p class="title">Art Director</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>example@example.com</p>
-                            <p><button class="btn--primary button">Contact</button></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="card">
-                        <img class="testimonials__avatar" src="images/avatars/xuser-05.jpg.pagespeed.ic.VeExVGrouX.jpg" alt="Mike" style="width:100%">
-                        <div class="container">
-                            <h2>Mike Ross</h2>
-                            <p class="title">Art Director</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>example@example.com</p>
-                            <p><button class="btn--primary button">Contact</button></p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="column">
-                    <div class="card">
-                        <img class="testimonials__avatar" src="images/avatars/xuser-05.jpg.pagespeed.ic.VeExVGrouX.jpg" alt="Mike" style="width:100%">
-                        <div class="container">
-                            <h2>Mike Ross</h2>
-                            <p class="title">Art Director</p>
-                            <!-- <p>Some text that describes me lorem ipsum ipsum lorem.</p> -->
-                            <p>example@example.com</p>
-                            <p><button class="btn--primary button">Contact</button></p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
 
     <section id="clients" class="s-clients">
- 	<div class="row clients-testimonials" data-aos="fade-up">
-		<div class="col-full">
-			<div class="testimonials">
-				<div class="testimonials__slide">
-					<p>
-					" It was a very enriching experience to be a part of Udaan club and indeed I had a great time. 
-Thank you for all very informative and useful events, energy and coordination!
-We really learnt a lot. Looking forward for many more wonderful events.
-I can proudly say that UDAAN club is the perfect place to enhance your competencies. "
-				</p>
-				<img src="images/avatars/xuser-01.jpg.pagespeed.ic.TQ57ViZCls.jpg" alt="Author image" class="testimonials__avatar">
-				<div class="testimonials__info"> 
-					<span class="testimonials__name">Sanya Arora</span> 
-					<span class="testimonials__pos">Senior Member in Board, Udaan</span>
-				</div>
-			</div>
-			<div class="testimonials__slide">
-				<p>
-				" I have been associated with group from last 5 months , what i have learned during these months a lot of skills , as well as communication skills and strong command in managing events , Working here feels like a family everyone is so supportive and always there to support each other. 
-The events and activities that have been conducted yet were full of knowledge , information and the Club is one the best enthusiastic club. "
-			</p>
-			<img src="images/avatars/xuser-05.jpg.pagespeed.ic.VeExVGrouX.jpg" alt="Author image" class="testimonials__avatar">
-			<div class="testimonials__info"> 
-				<span class="testimonials__name">Yash Bisht</span> 
-				<span class="testimonials__pos">Member in Board, Udaan</span>
-			</div>
-		</div>
-		<div class="testimonials__slide">
-			<p>
-			" I am grateful that i am a member of udaan club. 
-It was amazing working with you.
-I enjoyed all the events i attended with you so far. "
-		</p>
-		<img src="images/avatars/xuser-02.jpg.pagespeed.ic.h9SZyNXnWw.jpg" alt="Author image" class="testimonials__avatar">
-		<div class="testimonials__info"> 
-			<span class="testimonials__name">Aishwarya Thapliyal</span> 
-			<span class="testimonials__pos">BA Hons. Psychology Student</span>
-		</div>
-	</div>
-	<div class="testimonials__slide">
-			<p>
-			" Udaan club the name Udaan itself states flight. Since day 1 I have gained a lot of experience and knowledge about various things. The team members are really cooperative and being a student-led club allows students to explore themselves. This is really the best club I have ever been a part of. Looking forward to be a part of Udaan club always. "
-		</p>
-		<img src="images/avatars/Harmanpal.jpg" alt="Author image" class="testimonials__avatar">
-		<div class="testimonials__info"> 
-			<span class="testimonials__name">Harmanpal Singh</span> 
-			<span class="testimonials__pos">Junior Treasurer, Udaan</span>
-		</div>
-	</div>
-	<div class="testimonials__slide">
-			<p>
-			" Event planning at UDAAN club is an adventure, to say the least. Locking down a final roadmap, getting people registered, promoting it across channels, working out the permissions required. The list goes on and on. Before you know it, the day arrives. Even if it goes off without a hitch, the event doesn’t end when the clock strikes 12 and the team sleeps. "
-		</p>
-		<img src="images/avatars/Kratika.jpg" alt="Author image" class="testimonials__avatar">
-		<div class="testimonials__info"> 
-			<span class="testimonials__name">Kratika Dixit</span> 
-			<span class="testimonials__pos">Joint Secretary, Udaan</span>
-		</div>
-	</div>
-	<div class="testimonials__slide">
-			<p>
-			" It was very enriching experience to be part of udaan club and indeed I had a great time. Thankyou for all very informative and useful events , energy and coordination.
-Various experiences from different areas and real life experiences influenced me in a very good way. "
-		</p>
-		<img src="images/avatars/Ujwal.jpg" alt="Author image" class="testimonials__avatar">
-		<div class="testimonials__info"> 
-			<span class="testimonials__name">Ujwal Kumar</span> 
-			<span class="testimonials__pos">Marketing Manager, Udaan</span>                        </div>
+        <div class="row clients-testimonials" data-aos="fade-up">
+            <div class="col-full">
+                <div class="testimonials">
+                    <div class="testimonials__slide">
+                        <p>
+                            " It was a very enriching experience to be a part of Udaan club and indeed I had a great time. Thank you for all very informative and useful events, energy and coordination! We really learnt a lot. Looking forward for many more wonderful events. I can
+                            proudly say that UDAAN club is the perfect place to enhance your competencies. "
+                        </p>
+                        <img src="images/avatars/xuser-01.jpg.pagespeed.ic.TQ57ViZCls.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Sanya Arora</span>
+                            <span class="testimonials__pos">Senior Member in Board, Udaan</span>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <p>
+                            " I have been associated with group from last 5 months , what i have learned during these months a lot of skills , as well as communication skills and strong command in managing events , Working here feels like a family everyone is so supportive and always
+                            there to support each other. The events and activities that have been conducted yet were full of knowledge , information and the Club is one the best enthusiastic club. "
+                        </p>
+                        <img src="images/avatars/xuser-05.jpg.pagespeed.ic.VeExVGrouX.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Yash Bisht</span>
+                            <span class="testimonials__pos">Member in Board, Udaan</span>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <p>
+                            " I am grateful that i am a member of udaan club. It was amazing working with you. I enjoyed all the events i attended with you so far. "
+                        </p>
+                        <img src="images/avatars/xuser-02.jpg.pagespeed.ic.h9SZyNXnWw.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Aishwarya Thapliyal</span>
+                            <span class="testimonials__pos">BA Hons. Psychology Student</span>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <p>
+                            " Udaan club the name Udaan itself states flight. Since day 1 I have gained a lot of experience and knowledge about various things. The team members are really cooperative and being a student-led club allows students to explore themselves. This is really
+                            the best club I have ever been a part of. Looking forward to be a part of Udaan club always. "
+                        </p>
+                        <img src="images/avatars/Harmanpal.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Harmanpal Singh</span>
+                            <span class="testimonials__pos">Junior Treasurer, Udaan</span>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <p>
+                            " Event planning at UDAAN club is an adventure, to say the least. Locking down a final roadmap, getting people registered, promoting it across channels, working out the permissions required. The list goes on and on. Before you know it, the day arrives.
+                            Even if it goes off without a hitch, the event doesn’t end when the clock strikes 12 and the team sleeps. "
+                        </p>
+                        <img src="images/avatars/Kratika.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Kratika Dixit</span>
+                            <span class="testimonials__pos">Joint Secretary, Udaan</span>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <p>
+                            " It was very enriching experience to be part of udaan club and indeed I had a great time. Thankyou for all very informative and useful events , energy and coordination. Various experiences from different areas and real life experiences influenced me
+                            in a very good way. "
+                        </p>
+                        <img src="images/avatars/Ujwal.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Ujwal Kumar</span>
+                            <span class="testimonials__pos">Marketing Manager, Udaan</span> </div>
                     </div>
                 </div>
             </div>
@@ -644,22 +836,45 @@ Various experiences from different areas and real life experiences influenced me
         <div class="row contact-content" data-aos="fade-up">
             <div class="contact-primary">
                 <h3 class="h6">Send Us A Message</h3>
-                <form name="contactForm" id="contactForm" method="post" action="#" novalidate>
+
+                <!-- <form action="https://formspree.io/f/mgerpara" method="POST">
+                    <label> Your name:
+                        <input type="text" name="_name">
+                    </label>
+                    <label> Subject:
+                        <input type="text" name="_subject">
+                    </label>
+                    <label> Your email:
+                        <input type="email" name="_replyto">
+                    </label>
+                    <label> Your message:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form> -->
+
+
+                <form action="https://formspree.io/f/mgerpara" method="POST">
                     <fieldset>
                         <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required aria-required="true" class="full-width">
+                            <input id="contactName" type="text" name="_name" placeholder="Your Name" value="" minlength="2" required aria-required="true" class="full-width" required>
+
+                            <!-- <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required aria-required="true" class="full-width"> -->
                         </div>
                         <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required aria-required="true" class="full-width">
+                            <input type="text" name="_subject" id="contactSubject" placeholder="Subject" value="" class="full-width" required>
+                            <!-- <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required aria-required="true" class="full-width"> -->
                         </div>
                         <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                            <input type="email" name="_replyto" id="contactEmail" placeholder="Your Email" value="" required aria-required="true" class="full-width" required>
+                            <!-- <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width"> -->
                         </div>
                         <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required aria-required="true" class="full-width"></textarea>
+                            <textarea name="message" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required aria-required="true" class="full-width"></textarea>
+                            <!-- <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required aria-required="true" class="full-width"></textarea> -->
                         </div>
                         <div class="form-field">
-                            <button class="full-width btn--primary">Submit</button>
+                            <button type="submit" class="full-width btn--primary">Submit</button>
                             <div class="submit-loader">
                                 <div class="text-loader">Sending...</div>
                                 <div class="s-loader">
@@ -686,7 +901,7 @@ Various experiences from different areas and real life experiences influenced me
                         <h5>Email Us At</h5>
                         <p>
                             managementclub90@gmail.com
-        
+
                         </p>
                     </div>
                     <div class="cinfo">
@@ -713,7 +928,7 @@ Various experiences from different areas and real life experiences influenced me
                             <a href="https://www.linkedin.com/in/udaan-club" target="_blank">
                                 <i class="fa fa-linkedin" aria-hidden="true"></i>
                             </a>
-                    </li>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -730,8 +945,7 @@ Various experiences from different areas and real life experiences influenced me
             <div class="col-six tab-full right footer-subscribe">
                 <h4>Get Notified</h4>
                 <p>
-                    Subscribe to our News Letter and get information about all of our upcoming events and activities.<br>
-                    Subscribe Today and stay up to date with us.
+                    Subscribe to our News Letter and get information about all of our upcoming events and activities.<br> Subscribe Today and stay up to date with us.
                 </p>
                 <div class="subscribe-form">
                     <form id="mc-form" class="group" novalidate>
